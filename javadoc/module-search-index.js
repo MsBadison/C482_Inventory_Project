@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"c482.inventory"}];updateSearchResults();

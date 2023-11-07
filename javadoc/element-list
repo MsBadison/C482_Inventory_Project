@@ -1,0 +1,4 @@
+module:c482.inventory
+c482.inventory.controller
+c482.inventory.main
+c482.inventory.model
