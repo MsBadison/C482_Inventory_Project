@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.inventory.controller.ModifyPartController">
+    <Text layoutX="47.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Text>
+    <RadioButton fx:id="modifyInHouseButton" layoutX="230.0" layoutY="67.0" mnemonicParsing="false" onAction="#onModInHouse" text="In-House">
+        <font>
+            <Font size="14.0" />
+        </font>
+        <toggleGroup>
+            <ToggleGroup fx:id="modifyPartToggle" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="modifyOutsourcedButton" layoutX="374.0" layoutY="67.0" mnemonicParsing="false" onAction="#onModOutSourced" text="Outsourced" toggleGroup="$modifyPartToggle">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </RadioButton>
+    <TextField fx:id="modifyIDField" disable="true" editable="false" layoutX="163.0" layoutY="170.0" />
+    <TextField fx:id="modifyNameField" layoutX="163.0" layoutY="218.0" />
+    <TextField fx:id="modifyInvField" layoutX="163.0" layoutY="257.0" />
+    <TextField fx:id="modifyPriceField" layoutX="163.0" layoutY="299.0" />
+    <TextField fx:id="modifyMaxField" layoutX="163.0" layoutY="339.0" />
+    <TextField fx:id="modifyMachineIDField" layoutX="163.0" layoutY="385.0" />
+    <TextField fx:id="modifyMinField" layoutX="398.0" layoutY="339.0" />
+    <Text boundsType="VISUAL" layoutX="46.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text boundsType="VISUAL" layoutX="44.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text boundsType="VISUAL" layoutX="49.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text boundsType="VISUAL" layoutX="48.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="50.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text layoutX="350.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text fx:id="machineIDLabel" boundsType="VISUAL" layoutX="52.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Button fx:id="modifyCancelButton" layoutX="495.0" layoutY="484.0" mnemonicParsing="false" onMouseReleased="#cancelModifyPart" text="Cancel" />
+    <Button fx:id="modifySaveButton" layoutX="431.0" layoutY="484.0" mnemonicParsing="false" onMouseReleased="#modifyPartSave" text="Save" />
+</AnchorPane>
